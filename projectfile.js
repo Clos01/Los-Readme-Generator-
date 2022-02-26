@@ -23,5 +23,47 @@ function renderLicenseSection(license) { }
 const questions = [{
     type: `input`,
     name: `uaername`,
+    message: `Enter your Github username`,
+    // will have to validate that they enter one word 
+    valdiate: function (answer) {
+        if (answer.length <1){
+            return console.log(`please enter a Github UserName`)
+        }
+        return (true)
+    }
+}, 
 
-}]
+{
+    type: `input`,
+    name: `repository`,
+    message: `Enter the title of your project`,
+    // will have to validate that they entered something cannot be blank
+    valdiate: function (answer) {
+        if (answer.length <1 ){
+            return console.log(`Please Enter the title of your project!`)
+        }
+        return (true)
+    }
+},
+{
+    type: `iniput`,
+    name: `Description`,
+    message: `Enter the description of your project`,
+    // will have to validate that they entered something cannot be blank 
+    valdiate: function (answer){
+        if (answer.length <1 ){
+            return console.log(`Please Enter a description of your project!`)
+        }
+        return (true)
+    }
+},
+{
+    type: `iniput`,
+    name: `insallation`,
+    message: `Explain how the user can install your project `,
+   
+}
+
+
+
+]
